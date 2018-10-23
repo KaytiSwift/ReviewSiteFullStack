@@ -1,0 +1,27 @@
+﻿@model ReviewApp.Models.Category
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link rel="stylesheet" href="~/StyleSheet.css" />
+</head>
+<body>
+    <section>
+        <h1>Details for @Model.Name</h1>
+
+    </section>
+    @foreach (var review in Model.Reviews)
+    {
+        <a href="/reviews/details/@review.Id">@review.Title</a>
+    }
+    <footer>
+        <a href="/reviews/index">Home Page</a>
+    </footer>
+</body>
+</html>

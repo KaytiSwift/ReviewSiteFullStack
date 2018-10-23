@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ReviewApp.Models.Review>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/StyleSheet.css"/>
+</head>
+<body>
+    <h1>Reviews</h1>
+    
+    <div class="container">
+    @foreach (var review in Model)
+        {
+    <article>
+        <h3>
+            <a href="/reviews/details/@review.Id">@review.Title</a>
+        </h3>
+        <img src="@review.ImageURL" />
+    </article>    
+        
+        }
+     </div>
+
+    @*<div class="container">
+        <article>
+            <h3><a href="/Reviews/Details/1">Venom</a></h3>
+            <img src="~/images/Venom.jpg">
+            
+        </article>
+        <article>
+            <h3><a href="/Reviews/Details/2">Harry Potter and the Philosopher's Stone</a></h3>
+            <img src="~/images/HarryPotter.jpg">
+            
+        </article>
+        <article>
+            <h3><a href="/Reviews/Details/3">Guardians of the Galaxy</a></h3>
+            <img src="~/images/Guardians.jpg">
+            
+        </article>
+    </div>*@
+
+    <h2>Categories:</h2>
+    @foreach (var category in Model.Select(r => r.Category.Name).Distinct())
+    {
+        <div>
+            @category
+        </div>
+    }
+
+    <footer class="nav">
+        <a href="/Reviews">Home</a>
+        <a href="/Category">Categories</a>
+    </footer>
+</body>
+</html>

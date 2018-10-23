@@ -1,0 +1,29 @@
+﻿@model ReviewApp.Models.Review
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link rel="stylesheet" href="~/StyleSheet.css" />
+</head>
+<body>
+    <section>
+        <h1>Details for @Model.Title</h1>
+        
+    </section>
+
+    <section class="review">
+        <img class="image" src="@Model.ImageURL" alt="@Model.AltPicText" />
+        <p>Review: @Model.Content</p>
+        <a href="/category/details/@Model.Category.Id"><p id="category">Category: @Model.Category.Name</p></a>
+    </section>    
+    <footer>
+    <a href="/reviews/index">Home Page</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviewApp", "ReviewApp\ReviewApp.csproj", "{BE9D909D-254E-40D5-90ED-2B225928E252}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviewApp.Tests", "ReviewApp.Tests\ReviewApp.Tests.csproj", "{5E81CF33-1790-4065-8C00-E058FC1F8CE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE9D909D-254E-40D5-90ED-2B225928E252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE9D909D-254E-40D5-90ED-2B225928E252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE9D909D-254E-40D5-90ED-2B225928E252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE9D909D-254E-40D5-90ED-2B225928E252}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E81CF33-1790-4065-8C00-E058FC1F8CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E81CF33-1790-4065-8C00-E058FC1F8CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E81CF33-1790-4065-8C00-E058FC1F8CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E81CF33-1790-4065-8C00-E058FC1F8CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C66172D3-AEE1-4D17-911F-31E31EA115BF}
+	EndGlobalSection
+EndGlobal
