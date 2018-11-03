@@ -10,20 +10,38 @@
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
     <link rel="stylesheet" href="~/StyleSheet.css" />
+    <script>
+        var reviewId = @Model.Id;
+    </script>
 </head>
 <body>
     <section>
         <h1>Details for @Model.Title</h1>
-        
+
     </section>
 
     <section class="review">
         <img class="image" src="@Model.ImageURL" alt="@Model.AltPicText" />
         <p>Review: @Model.Content</p>
         <a href="/category/details/@Model.Category.Id"><p id="category">Category: @Model.Category.Name</p></a>
-    </section>    
+    </section>
+
+    <section>
+        <h2>Tags</h2>
+        <ol id="tag-list"></ol>
+    </section>
+
+    <h3>New Tag</h3>
+    <textarea id="new-tag"></textarea>
+    <div>
+        <button id="save-tag">Save</button>
+    </div>
+    
+
     <footer>
-    <a href="/reviews/index">Home Page</a>
+        <a href="/reviews/index">Home Page</a>
     </footer>
+
+    <script src="~/main.js"></script>
 </body>
 </html>

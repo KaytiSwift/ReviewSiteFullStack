@@ -10,9 +10,6 @@
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
     <link rel="stylesheet" href="~/StyleSheet.css" />
-    <script>
-        var reviewId = @Model.Id;
-    </script>
 </head>
 <body>
     <section>
@@ -25,16 +22,7 @@
             <a href="/reviews/details/@review.Id">@review.Title</a>
         </div>
 
-    }
-
-     <section>
-        <h2>Tags</h2>
-        <ol id="tag-list"></ol>
-    </section>
-
-    <h3>New Tag</h3>
-    <textarea id="new-tag"></textarea>
-    <button id="save-tag">Save</button>
+    }     
 
     <footer>
         <a href="/reviews/index">Home Page</a>

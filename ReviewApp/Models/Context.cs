@@ -49,7 +49,7 @@ namespace ReviewApp.Models
                 {
                     Id = 4,
                     Title = "Iron Man",
-                    ImageURL = "/images/Guardians.jpg",
+                    ImageURL = "/images/IronMan.jpg",
                     CategoryId = 3,
                     Content = "This movie is when the Marvel Cinematic Universe really started to come alive for me.",
                     AltPicText = "Iron Man"
@@ -59,7 +59,7 @@ namespace ReviewApp.Models
                 {
                     Id = 5,
                     Title = "The Holiday Calendar",
-                    ImageURL = "/images/Guardians.jpg",
+                    ImageURL = "/images/HolidayCalendar.jpg",
                     CategoryId = 4,
                     Content = "This movie is your typical cliche romantic comedy but that didn't stop me from loving it.",
                     AltPicText = "Holiday Calendar"
@@ -69,7 +69,7 @@ namespace ReviewApp.Models
                 {
                     Id = 6,
                     Title = "Eternal Sunshine of the Spotless Mind",
-                    ImageURL = "/images/Guardians.jpg",
+                    ImageURL = "/images/EternalSunshine.jpg",
                     CategoryId = 4,
                     Content = "One of the best movies I've ever seen! It is not a typical cliche romantic comedy and it has the best performance of Jim Carey's career.",
                     AltPicText = "Eternal Sunshine"
@@ -79,7 +79,7 @@ namespace ReviewApp.Models
                 {
                     Id = 7,
                     Title = "Avatar",
-                    ImageURL = "/images/Guardians.jpg",
+                    ImageURL = "/images/Avatar.jpg",
                     CategoryId = 2,
                     Content = "This is a great movie with something for everyone.",
                     AltPicText = "Avatar"
@@ -89,7 +89,7 @@ namespace ReviewApp.Models
                 {
                     Id = 8,
                     Title = "Arrival",
-                    ImageURL = "/images/Guardians.jpg",
+                    ImageURL = "/images/Arrival.jpg",
                     CategoryId = 1,
                     Content = "While many people raved about how awesome this movie was and how great the ending was, I have to say that I was disappointed because I saw the ending coming from a mile away.",
                     AltPicText = "Arrival"
