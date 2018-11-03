@@ -73,6 +73,26 @@ namespace ReviewApp.Models
                     CategoryId = 4,
                     Content = "One of the best movies I've ever seen! It is not a typical cliche romantic comedy and it has the best performance of Jim Carey's career.",
                     AltPicText = "Eternal Sunshine"
+                },
+
+                new Review()
+                {
+                    Id = 7,
+                    Title = "Avatar",
+                    ImageURL = "/images/Guardians.jpg",
+                    CategoryId = 2,
+                    Content = "This is a great movie with something for everyone.",
+                    AltPicText = "Avatar"
+                },
+
+                new Review()
+                {
+                    Id = 8,
+                    Title = "Arrival",
+                    ImageURL = "/images/Guardians.jpg",
+                    CategoryId = 1,
+                    Content = "While many people raved about how awesome this movie was and how great the ending was, I have to say that I was disappointed because I saw the ending coming from a mile away.",
+                    AltPicText = "Arrival"
                 }
 
                 );

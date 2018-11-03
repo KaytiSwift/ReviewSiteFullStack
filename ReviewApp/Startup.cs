@@ -17,8 +17,11 @@ namespace ReviewApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddScoped<ITagRepository, TagRepository>();
             services.AddScoped<IReviewRepository, SQLReviewRepository > ();
             services.AddScoped<ICategoryRepository, CategoryRepository > ();
+
             services.AddDbContext<Context>();
         }
 
