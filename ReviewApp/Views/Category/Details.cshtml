@@ -18,7 +18,10 @@
     </section>
     @foreach (var review in Model.Reviews)
     {
+    <div>
         <a href="/reviews/details/@review.Id">@review.Title</a>
+    </div>
+        
     }
     <footer>
         <a href="/reviews/index">Home Page</a>

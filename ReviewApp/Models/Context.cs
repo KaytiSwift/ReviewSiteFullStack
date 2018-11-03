@@ -43,7 +43,38 @@ namespace ReviewApp.Models
                     CategoryId = 1,
                     Content = "Hilarious! A must see movie! High quality writing just like every other MCU movie. If they don't make a third one, my heart will break.",
                     AltPicText = "Guardians"
-                }                
+                },
+
+                new Review()
+                {
+                    Id = 4,
+                    Title = "Iron Man",
+                    ImageURL = "/images/Guardians.jpg",
+                    CategoryId = 3,
+                    Content = "This movie is when the Marvel Cinematic Universe really started to come alive for me.",
+                    AltPicText = "Iron Man"
+                },
+
+                new Review()
+                {
+                    Id = 5,
+                    Title = "The Holiday Calendar",
+                    ImageURL = "/images/Guardians.jpg",
+                    CategoryId = 4,
+                    Content = "This movie is your typical cliche romantic comedy but that didn't stop me from loving it.",
+                    AltPicText = "Holiday Calendar"
+                },
+
+                new Review()
+                {
+                    Id = 6,
+                    Title = "Eternal Sunshine of the Spotless Mind",
+                    ImageURL = "/images/Guardians.jpg",
+                    CategoryId = 4,
+                    Content = "One of the best movies I've ever seen! It is not a typical cliche romantic comedy and it has the best performance of Jim Carey's career.",
+                    AltPicText = "Eternal Sunshine"
+                }
+
                 );
 
             modelBuilder.Entity<Category>().HasData(
@@ -61,6 +92,11 @@ namespace ReviewApp.Models
                 {
                     Id = 3,
                     Name = "Action"
+                },
+                new Category()
+                {
+                    Id = 4,
+                    Name = "RomCom"
                 }
                 );
             base.OnModelCreating(modelBuilder);
