@@ -16,10 +16,10 @@
     <section>
         <h1>Details for @Model.Text Tag</h1>
         <ul>
-            @foreach (var review in Model.ReviewTags)
+            @foreach (var reviewTag in Model.ReviewTags)
             {
                 <li>
-                    <a href="/Reviews/Details/@review.ReviewId">@review.Review.Title</a>
+                    <a href="/Reviews/Details/@reviewTag.ReviewId">@reviewTag.Review.Title</a>
                 </li>              
                 
             }
