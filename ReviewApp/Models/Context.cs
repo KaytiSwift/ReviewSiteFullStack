@@ -125,9 +125,9 @@ namespace ReviewApp.Models
 
             modelBuilder.Entity<Tag>().HasData(
                 new Tag() { Id = 1, Text = "#femaleLead" },
-                new Tag() { Id = 2, Text = "#superHeroes"},
-                new Tag() { Id = 3, Text = "#basedOnABook"},
-                new Tag() { Id = 4, Text = "#extraAwesome"},
+                new Tag() { Id = 2, Text = "#superHeroes" },
+                new Tag() { Id = 3, Text = "#basedOnABook" },
+                new Tag() { Id = 4, Text = "#extraAwesome" },
                 new Tag() { Id = 5, Text = "#comics" },
                 new Tag() { Id = 6, Text = "#romance" },
                 new Tag() { Id = 7, Text = "#well-acted" },

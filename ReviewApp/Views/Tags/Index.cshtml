@@ -1,4 +1,4 @@
-﻿@model ReviewApp.Models.Tag
+﻿@model IEnumerable<ReviewApp.Models.Tag>
 @{
     Layout = null;
 }
@@ -9,7 +9,27 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
+    <h1>Tags</h1>
+
+    <div class="container">
+        @foreach (var tag in Model)
+        {
+            <article>
+                <h3>
+                    <a href="/tags/details/@tag.Id">@tag.Text</a>
+                </h3>
+            </article>
+
+        }
+    </div>
+
+    <nav class="nav">
+        <a href="/Reviews">Home</a>
+        <a href="/Category">Categories</a>
+    </nav>
 </body>
 </html>

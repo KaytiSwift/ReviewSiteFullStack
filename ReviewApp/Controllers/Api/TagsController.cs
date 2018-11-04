@@ -21,12 +21,17 @@ namespace ReviewApp.Controllers.Api
         [HttpGet("{reviewId}")]
         public IEnumerable<Tag> Get(int reviewId)
         {
-            return tagRepo.GetTagsForReviewId(reviewId);
+            var tags = tagRepo.GetTagsForReviewId(reviewId);
+            return tags;
         }
 
         [HttpPost]
-        public bool Post([FromBody]Tag newTag)
+        public bool Post([FromBody]Tag newTag, int reviewId)
         {
+            newTag.ReviewTags = new List<ReviewTag>()
+            {
+                new ReviewTag() { ReviewId = reviewId }
+            };
             tagRepo.Create(newTag);
             return true;
         }

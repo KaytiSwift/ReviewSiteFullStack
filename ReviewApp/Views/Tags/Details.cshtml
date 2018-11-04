@@ -10,12 +10,28 @@
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
     <link href="~/StyleSheet.css" rel="stylesheet" />
-    <script>
-        var reviewId = @Model.Id;
-    </script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-    
-    
+    <section>
+        <h1>Details for @Model.Text Tag</h1>
+        <ul>
+            @foreach (var review in Model.ReviewTags)
+            {
+                <li>
+                    <a href="/Reviews/Details/@review.ReviewId">@review.Review.Title</a>
+                </li>              
+                
+            }
+        </ul>
+        
+    </section>
+
+    <nav class="nav">
+        <a href="/Reviews">Home</a>
+        <a href="/Category">Categories</a>
+        <a href="/Tags">Tags</a>
+    </nav>
+   
 </body>
 </html>

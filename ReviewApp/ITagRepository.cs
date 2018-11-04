@@ -10,5 +10,7 @@ namespace ReviewApp
     {
         IEnumerable<Tag> GetTagsForReviewId(int reviewId);
         void Create(Tag tag);
+        IEnumerable<Tag> GetAll();
+        Tag GetById(int id);
     }
 }

@@ -18,7 +18,7 @@ namespace ReviewApp.Controllers.Api
             this.commentRepo = commentRepo;
         }
 
-        [HttpGet("{todoId}")]
+        [HttpGet("{reviewId}")]
         public IEnumerable<Comment> Get(int reviewId)
         {
             return commentRepo.GetCommentsForReviewId(reviewId);

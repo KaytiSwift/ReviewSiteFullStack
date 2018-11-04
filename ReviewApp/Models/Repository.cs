@@ -48,7 +48,7 @@ namespace ReviewApp.Models
 
         public IEnumerable<T> GetAll()
         {
-            return db.Set<T>().ToList();
+            return db.Set<T>();
         }
     }
 }

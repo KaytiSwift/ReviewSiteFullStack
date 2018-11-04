@@ -9,7 +9,8 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    <link rel="stylesheet" href="~/StyleSheet.css"/>
+    <link rel="stylesheet" href="~/StyleSheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
     <h1>Reviews</h1>
@@ -45,17 +46,17 @@
         </article>
     </div>*@
 
-    <h2>Categories:</h2>
+    @*<h2>Categories:</h2>
     @foreach (var category in Model.Select(r => r.Category.Name).Distinct())
     {
         <div>
             @category
         </div>
-    }
+    }*@
 
-    <footer class="nav">
-        <a href="/Reviews">Home</a>
+    <nav class="nav">
         <a href="/Category">Categories</a>
-    </footer>
+        <a href="/Tags">Tags</a>
+    </nav>
 </body>
 </html>

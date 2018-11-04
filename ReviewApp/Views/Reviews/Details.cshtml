@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
     <link rel="stylesheet" href="~/StyleSheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script>
         var reviewId = @Model.Id;
     </script>
@@ -20,35 +21,45 @@
 
     </section>
 
-    <section class="review">
-        <img class="image" src="@Model.ImageURL" alt="@Model.AltPicText" />
-        <p>Review: @Model.Content</p>
-        <a href="/category/details/@Model.Category.Id"><p id="category">Category: @Model.Category.Name</p></a>
+    <section id="details-container">
+
+        <section class="review">
+            <img class="image" src="@Model.ImageURL" alt="@Model.AltPicText" />            
+        </section>
+
+        <section>
+
+            <p>Review: @Model.Content</p>
+            <a href="/category/details/@Model.Category.Id"><p id="category">Category: @Model.Category.Name</p></a>
+            <h2>Tags</h2>
+            <ul id="tag-list"></ul>
+
+
+            <h3>New Tag</h3>
+            <textarea id="new-tag"></textarea>
+            <div>
+                <button id="save-tag">Save</button>
+            </div>
+
+
+            <h2>Comments</h2>
+            <ol id="comment-list"></ol>
+        </section>
+
+        <h3>New Comment</h3>
+        <textarea id="new-comment"></textarea>
+        <div>
+            <button id="save-comment">Save</button>
+        </div>
+        
     </section>
+    
 
-    <section>
-        <h2>Tags</h2>
-        <ol id="tag-list"></ol>
-    </section>
-
-    <h3>New Tag</h3>
-    <textarea id="new-tag"></textarea>
-    <div>
-        <button id="save-tag">Save</button>
-    </div>
-
-    <section>
-        <h2>Comments</h2>
-        <ol id="comment-list"></ol>
-    </section>
-
-    <h3>New Comment</h3>
-    <textarea id="new-comment"></textarea>
-    <button id="save-comment">Save</button>
-
-    <footer>
-        <a href="/reviews/index">Home Page</a>
-    </footer>
+    <nav class="nav">
+        <a href="/Reviews">Home</a>
+        <a href="/Category">Categories</a>
+        <a href="/Tags">Tags</a>
+    </nav>
 
     <script src="~/main.js"></script>
 </body>
