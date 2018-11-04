@@ -31,9 +31,7 @@ namespace ReviewApp
 
             services.AddScoped<IReviewRepository, SQLReviewRepository > ();
             services.AddScoped<ICategoryRepository, CategoryRepository > ();
-            services.AddScoped<ITagRepository, TagRepository>();
-
-            
+            services.AddScoped<ITagRepository, TagRepository > ();         
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

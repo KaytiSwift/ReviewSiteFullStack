@@ -24,8 +24,8 @@ function createTag() {
 }
 
 function refreshTags() {
-    const ol = document.querySelector('#tag-list');
-    ol.innerHTML = "";
+    const ul = document.querySelector('#tag-list');
+    ul.innerHTML = "";
 
     fetch(`/api/tags/${reviewId}`)
         .then(res => res.json())
@@ -39,6 +39,6 @@ function addtagToDom(tag) {
     console.log(tag);
     const li = document.createElement('li');
     li.innerHTML = `${tag.text}`;
-    const ol = document.querySelector('#tag-list');
-    ol.appendChild(li);
+    const ul = document.querySelector('#tag-list');
+    ul.appendChild(li);
 }

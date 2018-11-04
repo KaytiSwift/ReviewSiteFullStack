@@ -9,6 +9,8 @@
     <Compile Remove="Migrations\20181022192807_AddedCategoryMigra.Designer.cs" />
     <Compile Remove="Migrations\20181104014640_AddSeedDataTagsAndReviewTags.cs" />
     <Compile Remove="Migrations\20181104014640_AddSeedDataTagsAndReviewTags.Designer.cs" />
+    <Compile Remove="Migrations\20181104024247_Test.cs" />
+    <Compile Remove="Migrations\20181104024247_Test.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

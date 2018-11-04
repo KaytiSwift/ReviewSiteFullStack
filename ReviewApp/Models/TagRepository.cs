@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ReviewApp.Models
 {
-    public class TagRepository : Repository<Models.Tag>, ITagRepository
+    public class TagRepository : Repository<Tag>, ITagRepository
     {
-        public TagRepository(DbContext db) : base(db)
+        public TagRepository(Context db) : base(db)
         {
         }
 
