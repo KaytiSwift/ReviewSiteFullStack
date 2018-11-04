@@ -29,10 +29,11 @@ namespace ReviewApp.Tests
         public void Post_And_Save()
         {
             var tag = new Tag();
+            var reviewId = 1;
             var tagRepo = Substitute.For<ITagRepository>();
             var underTest = new TagsController(tagRepo);
 
-            underTest.Post(tag);
+            underTest.Post(tag,reviewId);
 
             tagRepo.Received().Create(tag);
         }
