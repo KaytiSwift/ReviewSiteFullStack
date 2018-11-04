@@ -12,6 +12,7 @@ namespace ReviewApp.Models
         public DbSet<Category> Categories { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<ReviewTag> ReviewTags { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -165,6 +166,10 @@ namespace ReviewApp.Models
                 new ReviewTag() { Id = 29, ReviewId = 8, TagId = 6 },
                 new ReviewTag() { Id = 30, ReviewId = 8, TagId = 7 }
                 );
+
+            modelBuilder.Entity<Comment>().HasData(
+                new Comment() { Id = 1, Text = "This movie sucks!", CreatedAt = new DateTime(2018, 11, 2), ReviewId = 1 }
+                 );
 
             base.OnModelCreating(modelBuilder);
         }
