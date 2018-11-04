@@ -10,6 +10,8 @@ namespace ReviewApp.Models
     {
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<ReviewTag> ReviewTags { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -119,6 +121,51 @@ namespace ReviewApp.Models
                     Name = "RomCom"
                 }
                 );
+
+            modelBuilder.Entity<Tag>().HasData(
+                new Tag() { Id = 1, Text = "#femaleLead" },
+                new Tag() { Id = 2, Text = "#superHeroes"},
+                new Tag() { Id = 3, Text = "#basedOnABook"},
+                new Tag() { Id = 4, Text = "#extraAwesome"},
+                new Tag() { Id = 5, Text = "#comics" },
+                new Tag() { Id = 6, Text = "#romance" },
+                new Tag() { Id = 7, Text = "#well-acted" },
+                new Tag() { Id = 8, Text = "#violence" }
+                );
+
+            modelBuilder.Entity<ReviewTag>().HasData(
+                new ReviewTag() { Id = 1, ReviewId = 1, TagId = 5},
+                new ReviewTag() { Id = 2, ReviewId = 1, TagId = 7 },
+                new ReviewTag() { Id = 3, ReviewId = 1, TagId = 8 },
+                new ReviewTag() { Id = 4, ReviewId = 2, TagId = 3 },
+                new ReviewTag() { Id = 5, ReviewId = 2, TagId = 4 },
+                new ReviewTag() { Id = 6, ReviewId = 2, TagId = 7 },
+                new ReviewTag() { Id = 7, ReviewId = 3, TagId = 2 },
+                new ReviewTag() { Id = 8, ReviewId = 3, TagId = 4 },
+                new ReviewTag() { Id = 9, ReviewId = 3, TagId = 5 },
+                new ReviewTag() { Id = 10, ReviewId = 3, TagId = 7 },
+                new ReviewTag() { Id = 11, ReviewId = 3, TagId = 8 },
+                new ReviewTag() { Id = 12, ReviewId = 4, TagId = 2 },
+                new ReviewTag() { Id = 13, ReviewId = 4, TagId = 4 },
+                new ReviewTag() { Id = 14, ReviewId = 4, TagId = 5 },
+                new ReviewTag() { Id = 15, ReviewId = 4, TagId = 7 },
+                new ReviewTag() { Id = 16, ReviewId = 4, TagId = 8 },
+                new ReviewTag() { Id = 17, ReviewId = 5, TagId = 1 },
+                new ReviewTag() { Id = 18, ReviewId = 5, TagId = 6 },
+                new ReviewTag() { Id = 19, ReviewId = 5, TagId = 7 },
+                new ReviewTag() { Id = 20, ReviewId = 6, TagId = 4 },
+                new ReviewTag() { Id = 21, ReviewId = 6, TagId = 6 },
+                new ReviewTag() { Id = 22, ReviewId = 6, TagId = 7 },
+                new ReviewTag() { Id = 23, ReviewId = 7, TagId = 4 },
+                new ReviewTag() { Id = 24, ReviewId = 7, TagId = 6 },
+                new ReviewTag() { Id = 25, ReviewId = 7, TagId = 7 },
+                new ReviewTag() { Id = 26, ReviewId = 7, TagId = 8 },
+                new ReviewTag() { Id = 27, ReviewId = 8, TagId = 1 },
+                new ReviewTag() { Id = 28, ReviewId = 8, TagId = 3 },
+                new ReviewTag() { Id = 29, ReviewId = 8, TagId = 6 },
+                new ReviewTag() { Id = 30, ReviewId = 8, TagId = 7 }
+                );
+
             base.OnModelCreating(modelBuilder);
         }
 

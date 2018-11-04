@@ -14,11 +14,11 @@ namespace ReviewApp.Models
 
         public IEnumerable<Tag> GetTagsForReviewId(int reviewId)
         {
-            return from tag in GetAll()
-                   where tag.ReviewId == reviewId
-                   orderby tag.Text
-                   select tag;
-
+            return from tags in GetAll()
+                   from reviewTags in tags.ReviewTags
+                   where reviewTags.ReviewId == reviewId
+                   orderby tags.Text
+                   select reviewTags.Tag;
         }
     }
 }
